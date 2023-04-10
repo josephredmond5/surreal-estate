@@ -5,6 +5,9 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin: 0px;
+    border: 0px;
+    background-color: lightslategray;
   }
   
   code {
@@ -12,3 +15,8 @@ body {
       monospace;
   }
   
+  .title-name {
+    font-size: xx-large;
+    font-family: sans-serif;
+    color: brown;
+  }
