@@ -2,3 +2,14 @@
     background-color: white;
     border-bottom: 1px solid grey;
   }
+
+  .logo {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 250px;
+    height: 100px;
+    width: 450px;
+    position: sticky;
+    align-items: flex-end;
+  }
+  
