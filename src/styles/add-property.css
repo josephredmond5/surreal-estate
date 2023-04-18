@@ -1,3 +1,10 @@
-.add-property {
-    padding: 20px;
-}
+.add-property form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .add-property label {
+    display: block;
+  }
+  
