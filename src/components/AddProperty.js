@@ -7,7 +7,7 @@ const initialState = {
     type: "Flat",
     bedrooms: "",
     bathrooms: "",
-    price: "",
+    price: ,
     city: "Manchester",
   },
 };
