@@ -8,6 +8,6 @@ const Alert = ({ message, success }) => {
   );
 };
 
-console.log(Alert );
+console.log(Alert);
 
 export default Alert;
