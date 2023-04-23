@@ -1,9 +1,9 @@
 import React from 'react';
-import NavBar from './navBar';
-import Properties from './Properties';
-import AddProperty from './AddProperty';
-import '../styles/navbar.css';
-import { Routes, Route } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './navBar.js';
+import Properties from './Properties.js';
+import AddProperty from './AddProperty.js';
 
 const App = () => {
   return (
@@ -17,5 +17,5 @@ const App = () => {
   );
 };
 
-export default App;
 
+export default App;
