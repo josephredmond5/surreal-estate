@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { BrowserRouter, Router, Route } from 'react-router-dom';
 import "../styles/add-property.css";
+import Alert from './Alert.js';
+
 
 const initialState = {
   fields: {
