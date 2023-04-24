@@ -45,12 +45,10 @@ const AddProperty = () => {
   return (
     <div className="add-property">
       <h2>Add Property</h2>
-      {alert.message && (
-        <div className={`alert ${alert.isSuccess ? 'success' : 'error'}`}>
-          {alert.message}
-        </div>
-      )}
       <form onSubmit={handleAddProperty}>
+        {alert.message && (
+          <Alert message={alert.message} success={alert.isSuccess} />
+        )}
         <label htmlFor="title">
           Title
           <input
