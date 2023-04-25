@@ -1,15 +1,26 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import Alert from "../components/Alert";
+import React from 'react';
+import { render } from '@testing-library/react';
+import Alert from '../components/Alert';
 
-test("displays an error message", () => {
-    const { getByText } = render(<Alert message="Error!" />);
-  
-    expect(getByText(/Error/).textContent).toBe("Error!");
+describe('Alert component', () => {
+  it('should render null when no message is provided', () => {
+    const { container } = render(<Alert />);
+    expect(container.firstChild).toBeNull();
   });
 
-  test("displays a success message", () => {
-    const { getByText } = render(<Alert message="Success!!!!" success />);
-  
-    expect(getByText(/Success/).textContent).toBe("Success!!!!");
+  it('should match snapshot when success prop is true', () => {
+    const { getByText, asFragment } = render(
+      <Alert message="Success!" success />
+    );
+    expect(getByText(/Success/).textContent).toBe('Success!');
+    expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should match snapshot when success prop is false', () => {
+    const { getByText, asFragment } = render(
+      <Alert message="Error!" success={false} />
+    );
+    expect(getByText(/Error/).textContent).toBe('Error!');
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
